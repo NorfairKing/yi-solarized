@@ -28,7 +28,7 @@ import           Yi
 solarizedTheme :: Proto UIStyle
 solarizedTheme = defaultTheme `override` \sets _ -> sets
   { baseAttributes     = emptyAttributes { foreground = solarizedBase1
-                                         , background = rgb 0
+                                         , background = solarizedBase03
                                          , reverseAttr = False }
   , modelineAttributes = emptyAttributes { foreground = solarizedBase1
                                          , background = solarizedBase03
@@ -40,7 +40,7 @@ solarizedTheme = defaultTheme `override` \sets _ -> sets
   , selectedStyle      = withBg solarizedBase03
   , hintStyle          = withBg solarizedBase03
   , builtinStyle       = withFg solarizedCyan
-  , commentStyle       = withFg solarizedBase02
+  , commentStyle       = withFg solarizedBase01
   , keywordStyle       = withFg solarizedRed
   , stringStyle        = withFg solarizedRed
   , typeStyle          = withFg solarizedYellow
@@ -66,7 +66,7 @@ rgb x = RGB (fi (x `shiftR` 16))
 
 -- | Hex value: 0x002B36
 solarizedBase03 :: Color
-solarizedBase03 = rgb 0x002B36
+solarizedBase03 = rgb 0x000000
 
 -- | Hex value: 0x073642
 solarizedBase02 :: Color
